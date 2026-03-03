@@ -1,0 +1,51 @@
+# Nova language - example program
+
+func fib(n: int) -> int:
+    if (n < 2):
+        return n
+    endif
+    return fib(n - 1) + fib(n - 2)
+end
+
+func greet(name: str) -> void:
+    print("Hello, " + name)
+end
+
+func main() -> void:
+    # Variables
+    x: int = 10
+    msg: str = "Nova v0.1"
+
+    print(msg)
+    print(x)
+
+    # Conditionals
+    if (x > 5):
+        print("x is greater than 5")
+    elif (x == 5):
+        print("x is exactly 5")
+    else:
+        print("x is less than 5")
+    endif
+
+    # While loop
+    i: int = 0
+    while (i < 3):
+        print(i)
+        i = i + 1
+    endwhile
+
+    # For loop
+    for (j: int = 0, j < 5, j = j + 1):
+        print(j)
+    endfor
+
+    # Function calls
+    greet("World")
+
+    result: int = fib(10)
+    print(result)
+
+    # Undef
+    undef x
+end
