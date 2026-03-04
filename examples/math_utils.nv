@@ -1,0 +1,29 @@
+# math_utils.nv — importable library
+
+typedef Meters = int
+typedef Kilograms = int
+
+func abs_val(n: int) -> int:
+    if (n < 0):
+        return -n
+    endif
+    return n
+end
+
+func max_val(a: int, b: int) -> int:
+    if (a > b):
+        return a
+    endif
+    return b
+end
+
+func min_val(a: int, b: int) -> int:
+    if (a < b):
+        return a
+    endif
+    return b
+end
+
+func clamp(val: int, lo: int, hi: int) -> int:
+    return max_val(lo, min_val(val, hi))
+end

@@ -1,0 +1,57 @@
+# Nova v0.2 — comprehensive example
+
+# Basic variables and print
+func greet(name: str) -> void:
+    print("Hello, " + name)
+end
+
+func fib(n: int) -> int:
+    if (n < 2):
+        return n
+    endif
+    return fib(n - 1) + fib(n - 2)
+end
+
+func main() -> void:
+    # Basic types
+    x: int = 42
+    msg: str = "Nova v0.2"
+    print(msg)
+    print(x)
+
+    # Compound assignment
+    x += 8
+    print(x)   # 50
+
+    # Modulo
+    rem: int = 17 % 5
+    print(rem)  # 2
+
+    # Boolean with not
+    flag: bool = true
+    print(not flag)  # false
+
+    # Function call
+    greet("World")
+    result: int = fib(10)
+    print(result)
+
+    # While with break/continue
+    i: int = 0
+    while (i < 10):
+        if (i == 3):
+            i += 1
+            continue
+        endif
+        if (i == 6):
+            break
+        endif
+        print(i)
+        i += 1
+    endwhile
+
+    # For loop
+    for (j: int = 0, j < 5, j += 1):
+        print(j)
+    endfor
+end

@@ -1,0 +1,31 @@
+# Nova structs example
+
+struct Point:
+    x: int
+    y: int
+endstruct
+
+struct Rectangle:
+    origin: int
+    width: int
+    height: int
+endstruct
+
+func area(w: int, h: int) -> int:
+    return w * h
+end
+
+func main() -> void:
+    # Struct field access (via pointer on stack)
+    p: Point = Point
+    p.x = 10
+    p.y = 20
+    print(p.x)
+    print(p.y)
+
+    r: Rectangle = Rectangle
+    r.width = 5
+    r.height = 8
+    a: int = area(r.width, r.height)
+    print(a)   # 40
+end

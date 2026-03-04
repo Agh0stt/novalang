@@ -1,0 +1,36 @@
+# typedef_import.nv — demonstrates import and typedef
+
+import "math_utils.nv"
+
+typedef Score = int
+typedef Name = str
+
+struct Player:
+    score: int
+    lives: int
+endstruct
+
+func main() -> void:
+    # typedef aliases for primitive types
+    dist: Meters = 42
+    wt: Kilograms = 70
+    print(dist)   # 42
+    print(wt)     # 70
+
+    # imported functions from math_utils.nv
+    print(abs_val(-5))       # 5
+    print(max_val(3, 7))     # 7
+    print(clamp(15, 0, 10))  # 10
+    print(clamp(-5, 0, 10))  # 0
+
+    # typedef aliases
+    my_score: Score = 9999
+    print(my_score)
+
+    # struct usage
+    p: Player = Player
+    p.score = my_score
+    p.lives = 3
+    print(p.score)   # 9999
+    print(p.lives)   # 3
+end
