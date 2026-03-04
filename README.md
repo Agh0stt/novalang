@@ -1,4 +1,4 @@
-# Nova Language v0.2
+# Nova Language v0.2.2
 
 A statically-typed, compiled language that targets Linux AArch64 (ARM64) with **zero libc dependency** — all I/O is via raw syscalls.
 
